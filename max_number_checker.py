@@ -20,5 +20,8 @@ if user_input_number_1.isdigit() and user_input_number_2.isdigit() and user_inpu
         print (user_input_number_2, " is the highest number")
     if user_input_number_1 > user_input_number_3 and user_input_number_2:
         print(user_input_number_1, " is the highest number")
+    else:
+        print("They have the same value\n", user_input_number_1, " is the highest value")
+
 else:
     print ("That is not a number you silly")
