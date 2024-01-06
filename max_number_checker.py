@@ -16,12 +16,12 @@ if user_input_number_1.isdigit() and user_input_number_2.isdigit() and user_inpu
 # Check the 3 numbers
     if user_input_number_3 > user_input_number_2 and user_input_number_1:
         print (user_input_number_3, " is the highest number")
-    if user_input_number_2 > user_input_number_3 and user_input_number_1:
+    elif user_input_number_2 > user_input_number_3 and user_input_number_1:
         print (user_input_number_2, " is the highest number")
-    if user_input_number_1 > user_input_number_3 and user_input_number_2:
+    elif user_input_number_1 > user_input_number_3 and user_input_number_2:
         print(user_input_number_1, " is the highest number")
     else:
-        print("They have the same value\n", user_input_number_1, " is the highest value")
-
+        print("They have the same value")
+        print(user_input_number_1, " is the highest value")
 else:
     print ("That is not a number you silly")
