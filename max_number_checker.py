@@ -29,17 +29,20 @@ if user_input_number_1.isdigit() and user_input_number_2.isdigit() and user_inpu
     elif user_input_number_1 > user_input_number_3 and user_input_number_2:
         print(user_input_number_1, " has the highest value")
 else:
+
 # Checking if user input 1, 2, or 3 is a number
     if not user_input_number_1.isdigit() and not user_input_number_2.isdigit() and not user_input_number_3.isdigit(): 
             print("Input number 1, 2, and 3 is not a number")
-
+        
+        #Cheking is 2 at the same time is a number
     elif not user_input_number_1.isdigit() and not user_input_number_2.isdigit():
             print("Input number 1 and 2 are not numbers")
     elif not user_input_number_2.isdigit() and not user_input_number_3.isdigit(): 
             print("Input number 2 and 3 are not numbers")
     elif not user_input_number_1.isdigit() and not user_input_number_3.isdigit(): 
             print("Input number 1 and 3 are not numbers")
-
+        
+        # Checking if one of them is a number
     elif not user_input_number_1.isdigit():
             print("Input number 1 is not a number")
     elif not user_input_number_2.isdigit():
