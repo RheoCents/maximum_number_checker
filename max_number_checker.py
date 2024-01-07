@@ -2,6 +2,7 @@
 
 # Welcoming message
 print("Hello and welcome to Rheo's number checker\nFor this, we will ask you 3 numbers and it we will show the highest!")
+
 # Input Variable labeling
 user_input_number_1 = input("give me a number ")
 user_input_number_2 = input("give me another ")
@@ -14,14 +15,21 @@ if user_input_number_1.isdigit() and user_input_number_2.isdigit() and user_inpu
     user_input_number_3 = float(user_input_number_3)
 
 # Check the 3 numbers
-    if user_input_number_3 > user_input_number_2 and user_input_number_1:
+    if user_input_number_1 == user_input_number_2 > user_input_number_3:
+        print("number 1 and 2 have the same value")
+        print(user_input_number_1, " is the highest value")
+    elif user_input_number_2 == user_input_number_3 > user_input_number_1:
+        print("number 2 and 3 have the same value")
+        print(user_input_number_1, " is the highest value")
+    elif user_input_number_3 == user_input_number_1 > user_input_number_2:
+        print("number 2 and 3 have the same value")
+        print(user_input_number_1, " is the highest value")
+    elif user_input_number_3 > user_input_number_2 and user_input_number_1:
         print (user_input_number_3, " is the highest number")
     elif user_input_number_2 > user_input_number_3 and user_input_number_1:
         print (user_input_number_2, " is the highest number")
     elif user_input_number_1 > user_input_number_3 and user_input_number_2:
         print(user_input_number_1, " is the highest number")
-    else:
-        print("They have the same value")
-        print(user_input_number_1, " is the highest value")
+
 else:
     print ("That is not a number you silly")
