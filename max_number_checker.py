@@ -1,5 +1,3 @@
-#
-
 # Welcoming message
 print("Hello and welcome to Rheo's number checker\nFor this, we will ask you 3 numbers and it we will show the highest!")
 
