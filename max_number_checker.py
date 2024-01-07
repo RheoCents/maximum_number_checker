@@ -40,7 +40,7 @@ def rheo_number_checker():
     else:
 
     # Checking if user input 1, 2, or 3 is a number
-        if not user_input_number_1.isdigit() and not user_input_number_2.isdigit() and not user_input_number_3.isdigit(): 
+        if not float(user_input_number_1).isdigit() and not user_input_number_2.isdigit() and not user_input_number_3.isdigit(): 
                 print("Input number 1, 2, and 3 is not a number")
                 print("no input have the highest value")
             
@@ -74,16 +74,20 @@ def rheo_number_checker():
                 
         elif not user_input_number_3.isdigit():
                 if user_input_number_1 > user_input_number_2:
+                    user_input_number_1 = float(user_input_number_1)
                     print("Input number 1 is not a number")
                     print(user_input_number_1, "is the highest value")  
                 elif user_input_number_2 > user_input_number_1:
+                    user_input_number_2 = float(user_input_number_2)
                     print("Input number 1 is not a number")
                     print(user_input_number_2, "is the highest value")
 
     print("Would you like to try again? Yes/No")
     repeat_rheo_number_checker = str(input())
     if  repeat_rheo_number_checker.lower == "Yes" or "yes":
+          print()
           rheo_number_checker()
-
+    else:
+         print("Thank you for using Rheo's maximum number checker for threes!")
 rheo_number_checker()
             
