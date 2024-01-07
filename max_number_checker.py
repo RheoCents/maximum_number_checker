@@ -8,14 +8,13 @@ def is_number(value):
 # Welcome
 print("Hello and welcome to Rheo's number checker\nFor this, we will ask you 3 numbers and it we will show the highest!")
 
-
-
-
+# Rheo's number checker
 def rheo_maximum_number_checker():
     # Input
     user_input_number_1 = input("give me a number ")
     user_input_number_2 = input("give me another ")
     user_input_number_3 = input("give me the last one ")
+    
     # Interchangable variable set
     maximum_number = None
 
