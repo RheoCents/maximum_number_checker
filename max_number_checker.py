@@ -8,6 +8,20 @@ def rheo_number_checker():
     user_input_number_2 = input("give me another ")
     user_input_number_3 = input("give me the last one ")
 
+    #defining float values
+    def is_float_number(value):
+         try:
+              float(value)
+              return True
+         except ValueError:
+              return False
+    def is_int(value):
+         try:
+              int(value)
+              return True
+         except ValueError:
+              return False
+
     # Checking if it is a number
     if user_input_number_1.isdigit() and user_input_number_2.isdigit() and user_input_number_3.isdigit():
         user_input_number_1 = float(user_input_number_1)
@@ -40,7 +54,7 @@ def rheo_number_checker():
     else:
 
     # Checking if user input 1, 2, or 3 is a number
-        if not float(user_input_number_1).isdigit() and not user_input_number_2.isdigit() and not user_input_number_3.isdigit(): 
+        if not user_input_number_1.isdigit() and not user_input_number_2.isdigit() and not user_input_number_3.isdigit(): 
                 print("Input number 1, 2, and 3 is not a number")
                 print("no input have the highest value")
             
