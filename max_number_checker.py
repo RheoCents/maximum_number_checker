@@ -1,53 +1,68 @@
-def is_number(value):
-    try:
+import tkinter as tk
+
+
+
+def rheo_maximum_number_checker():
+    user_input_number_1 = entry1.get()
+    user_input_number_2 = entry2.get()
+    user_input_number_3 = entry3.get()
+    
+    def is_number(value):
+     try:
         float(value)
         return True
-    except ValueError:
+     except ValueError:
         return False
-
-# Welcome
-print("Hello and welcome to Rheo's number checker\nFor this, we will ask you 3 numbers and it we will show the highest!")
-
-# Rheo's number checker
-def rheo_maximum_number_checker():
-    # Input
-    user_input_number_1 = input("give me a number ")
-    user_input_number_2 = input("give me another ")
-    user_input_number_3 = input("give me the last one ")
     
-    # Interchangable variable set
     maximum_number = None
 
-    #same value interpreter
-    if user_input_number_1 == user_input_number_2 :
-        if user_input_number_1 == user_input_number_3:
-            maximum_number = user_input_number_1
-        
-    #maximum checker if all are numbers
+    if user_input_number_1 == user_input_number_2 == user_input_number_3:
+        maximum_number = user_input_number_1
+
     if is_number(user_input_number_1):
-            maximum_number = float(user_input_number_1)
+        maximum_number = float(user_input_number_1)
 
     if is_number(user_input_number_2):
-            if maximum_number is None or float(user_input_number_2) > maximum_number:
-                maximum_number = float(user_input_number_2)
+        if maximum_number is None or float(user_input_number_2) > maximum_number:
+            maximum_number = float(user_input_number_2)
 
     if is_number(user_input_number_3):
-            if maximum_number is None or float(user_input_number_3) > maximum_number:
-                maximum_number = float(user_input_number_3)
+        if maximum_number is None or float(user_input_number_3) > maximum_number:
+            maximum_number = float(user_input_number_3)
 
-    #printing the maximum number
     if maximum_number is not None:
-        print(maximum_number, "is the highest value")
-    
-    #print for when no number was inputted
+        result_label.config(text=f"The highest value is: {maximum_number}")
     else:
-         print("That is not a number you silly")
+        result_label.config(text="That's no number, you silly")
 
-        #repeat prompt
-while True:
-    rheo_maximum_number_checker()
-    print()
-    repeat_rheo_number_checker = input("Would you like to try again? (Y/N): ").strip().lower()
-    if repeat_rheo_number_checker != "Y" and repeat_rheo_number_checker != "y":
-        print("Thank you for using Rheo's maximum number checker for threes!")
-        break
+root = tk.Tk()
+root.title("Rheo's Maximum Number Checker")
+
+welcome_label = tk.Label(root, text="Hello and welcome to Rheo's number checker! Enter 3 numbers below:")
+welcome_label.pack()
+
+input_frame = tk.Frame(root)
+input_frame.pack()
+
+label1 = tk.Label(input_frame, text="First number:")
+label1.grid(row=0, column=0)
+entry1 = tk.Entry(input_frame)
+entry1.grid(row=0, column=1)
+
+label2 = tk.Label(input_frame, text="Second number:")
+label2.grid(row=1, column=0)
+entry2 = tk.Entry(input_frame)
+entry2.grid(row=1, column=1)
+
+label3 = tk.Label(input_frame, text="Third number:")
+label3.grid(row=2, column=0)
+entry3 = tk.Entry(input_frame)
+entry3.grid(row=2, column=1)
+
+check_button = tk.Button(root, text="Check", command=rheo_maximum_number_checker)
+check_button.pack()
+
+result_label = tk.Label(root, text="")
+result_label.pack()
+
+root.mainloop()
