@@ -36,12 +36,12 @@ def check_maximum_number():
 
 #main root
 root = tk.Tk()
-root.title("Rheo's Number Checker")
+root.title("Rheo's Maximum Number Checker")
 root.configure(background="black")
 root.geometry("400x230")
 
 #pop-up message
-label = tk.Label(root, text="Hello and welcome to Rheo's number checker\n"
+label = tk.Label(root, text="Hello and welcome to Rheo's maximum number checker\n"
                  "For this, we will ask you 3 numbers and it we will show the highest!",background="black", foreground="orange")
 label.pack()
 label.config(background="black")
