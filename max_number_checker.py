@@ -55,30 +55,34 @@ def rheo_number_checker():
                 print("Input number 1 and 3 are not numbers")
                 print(user_input_number_2, " is the highest value")
             
-            # Checking if one of them is a number
+            # Checking if one of them is not a number
         elif not user_input_number_1.isdigit():
                 if user_input_number_2 > user_input_number_3:
                     print("Input number 1 is not a number")
-                    print(user_input_number_2, " is the highest value")
+                    print(user_input_number_2, "is the highest value")
                 elif user_input_number_3 > user_input_number_2:
                     print("Input number 1 is not a number")
                     print(user_input_number_3, "is the highest value")
 
         elif not user_input_number_2.isdigit():
-                 if user_input_number_2 > user_input_number_3:
+                if user_input_number_1 > user_input_number_3:
                     print("Input number 1 is not a number")
-                    print(user_input_number_2, " is the highest value")
-                elif user_input_number_3 > user_input_number_2:
+                    print(user_input_number_1, "is the highest value")  
+                elif user_input_number_3 > user_input_number_1:
                     print("Input number 1 is not a number")
                     print(user_input_number_3, "is the highest value")
                 
-
         elif not user_input_number_3.isdigit():
-                print("Input number 3 is not a number")
+                if user_input_number_1 > user_input_number_2:
+                    print("Input number 1 is not a number")
+                    print(user_input_number_1, "is the highest value")  
+                elif user_input_number_2 > user_input_number_1:
+                    print("Input number 1 is not a number")
+                    print(user_input_number_2, "is the highest value")
 
     print("Would you like to try again? Yes/No")
     repeat_rheo_number_checker = str(input())
-    if  repeat_rheo_number_checker.lower == str("Yes" or "yes"):
+    if  repeat_rheo_number_checker.lower == "Yes" or "yes":
           rheo_number_checker()
 
 rheo_number_checker()
